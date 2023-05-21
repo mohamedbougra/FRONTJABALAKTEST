@@ -1,0 +1,50 @@
+<div class="content">
+  <h2>Paiement de facture</h2>
+  <div class="header">
+    <div class="btn btn-light btn-lg mt-4">Liste créancier</div>
+    <div class="btn btn-light mt-4 btn-lg">Historique</div>
+  </div>
+  <div class="row bg-light">
+    <div class="col">
+      <div class="dropdown">
+        <button
+          class="btn btn-light btn-lg btn-block dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Toutes les catégories
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button class="dropdown-item btn-lg">Toutes les catégories</button>
+          <button class="dropdown-item btn-lg">Factures</button>
+          <button class="dropdown-item btn-lg">Recharges</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="content2 row">
+      <div *ngFor="let produit of produits" class="col-6 produit">
+        <div class="facture row">
+          <div class="col-5">
+            <img src="{{ produit.image }}" class="img-fluid" />
+          </div>
+          <div class="col-7">
+            <h4>{{ produit.name }}</h4>
+            <p>{{ produit.description }}</p>
+            <button
+              class="btn-sm cancel-client-button btn"
+              type="button"
+              (click)="checkAvailableBill('{{ produit.Username }}')"
+            >
+              <i class="fa-sharp fa-solid fa-eye fa-fw mr-3"></i>les factures
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

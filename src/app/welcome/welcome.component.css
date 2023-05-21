@@ -1,0 +1,29 @@
+.card {
+  background-color: #fff;
+  border-radius: 23px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem !important;
+}
+.card:hover {
+  background-color: #e9ecf0;
+}
+.container-fluid {
+  padding: 0% 0% 7%;
+}
+.col {
+  margin: 0% !important;
+  padding: 0% !important;
+}
+.content {
+  padding: 4%;
+
+  text-align: left;
+}
+.content2 {
+  padding-top: 4%;
+  text-align: center !important;
+}
+.solde {
+  margin-left: 15%;
+  margin-right: 15%;
+}

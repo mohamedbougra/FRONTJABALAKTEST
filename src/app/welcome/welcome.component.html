@@ -1,0 +1,35 @@
+<div class="content">
+  <div *ngIf="client.nom != null">
+    <h2>Welcome Mr <span style="color:#0d417d">{{ client.nom }}</span>,</h2>
+  </div>
+  <div>
+    <div class="content2">
+      <div class="solde align-self-center">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body cleartfix">
+              <div class="media align-items-stretch">
+                <div
+                  *ngIf="client.compte.solde != null"
+                  class="col-4 align-self-center"
+                >
+                  <h1 class="mr-2">
+                    {{ client.compte.solde }}
+                    <span>$</span>
+                  </h1>
+                </div>
+                <div class="col-4 media-body">
+                  <h4>Solde</h4>
+                  <span>Derham</span>
+                </div>
+                <div class="col-4 align-self-center">
+                  <i class="icon fa-solid fa-wallet fa-3x"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

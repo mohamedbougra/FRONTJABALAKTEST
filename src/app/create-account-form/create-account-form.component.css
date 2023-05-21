@@ -1,0 +1,101 @@
+.card {
+  padding: 20px 40px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none !important;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blue-text {
+  color: #00bcd4;
+}
+.form-control-label {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+input,
+textarea,
+button {
+  padding: 8px 15px;
+  border-radius: 5px !important;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 18px !important;
+  font-weight: 300;
+}
+
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #00bcd4;
+  outline-width: 0;
+  font-weight: 400;
+}
+
+.btn-block {
+  text-transform: uppercase;
+  font-size: 15px !important;
+  font-weight: 400;
+  height: 43px;
+  cursor: pointer;
+}
+.btn-block:hover {
+  color: #fff !important;
+}
+
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 10;
+}
+
+.mainContainer {
+  width: 90%;
+  margin: 0px !important;
+  position: absolute;
+  right: 5%;
+}
+
+.main-layout {
+  margin: 0px !important;
+}
+
+.main {
+  min-width: 100vw !important;
+  min-height: 100vh !important;
+  margin: 0px !important;
+  background-color: hsl(218, 41%, 15%);
+  background-image: radial-gradient(
+      650px circle at 0% 0%,
+      hsl(218, 41%, 35%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1250px circle at 100% 100%,
+      hsl(218, 41%, 45%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%
+    );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #fbfbfb;
+}
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}

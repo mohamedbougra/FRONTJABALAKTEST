@@ -1,0 +1,134 @@
+<main  class="main">
+    <div class=" mainContainer">
+          
+        <div class=" px-0 py-0  formContainer">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 text-center">
+                  
+                    <div class="card">
+                        <h5 class="text-center mb-4">Lets Begin By opening an Account !</h5>
+        
+                        <form class="form-card" #ClientOpenAccountForm="ngForm" (ngSubmit)="createAccountClicked()">
+                            
+                           
+                            <div class="row justify-content-between text-left">
+        
+                                <div class="form-group col-sm-12 flex-column d-flex"> 
+        
+                                    <label class="form-control-label px-3">Please select your account type
+                                        <span class="text-danger"> *</span></label> 
+                                        
+                                     
+                                            <select id="AccountTType" 
+                                           [(ngModel)]="accountType"
+                                            #AccountTType="ngModel"
+                                            name="accountType"
+                                            required
+                                           
+                                             >
+                                                <option *ngFor="let AccountType of accountTypes" value="{{AccountType}}" >{{AccountType}}</option>
+                                            </select>
+                                </div>
+                            </div>
+        
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">First name
+                                       </label>
+        
+                                         <input type="text"
+                                         ngModel
+                                         #FirstName="ngModel"
+                                          id="fname" 
+                                          name="fname"
+                                          [disabled]="true"
+                                           required 
+                                          [value]="client.nom"
+                                           pattern="[a-zA-Z]+"> 
+                                        </div>
+        
+                                       
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Last name
+                                      </label> 
+                                        
+                                        <input type="text" 
+                                        ngModel
+                                        #LastName="ngModel"
+                                        id="lname" 
+                                        name="lname" 
+                                        [disabled]="true"
+                                        required
+                                        pattern="[a-zA-Z]+"
+                                        [value]="client.prenom"> </div>
+                                        
+                                      
+                            </div>
+        
+                         
+                           
+        
+                            <div class="row justify-content-between text-left">
+        
+                                <div class="form-group col-sm-6 flex-column d-flex">
+        
+                                     <label class="form-control-label px-3">Email Adress
+                                       </label> 
+                                         
+                                         <input type="text"
+                                         ngModel
+                                         #AgentEmail="ngModel" 
+                                         id="Agentemail" 
+                                         name="AgentEmail" 
+                                         [disabled]="true"
+                                         required 
+                                         pattern="^[a-zA-Z0-9.]+@gmail.com$"
+                                         [value]="client.email">
+                                 </div>
+        
+                                 <div class="form-group col-sm-6 flex-column d-flex">
+        
+                                    <label class="form-control-label px-3">Phone Number
+                                       </label> 
+                                        
+                                        <input type="text"
+                                        ngModel
+                                        #AgentPhoneNumber="ngModel" 
+                                        id="AgentPhoneNumber" 
+                                        name="AgentPhoneNumber" 
+                                        [disabled]="true"
+                                        required
+                                        pattern="[0-9+]+"
+                                        minlength="10" [value]="client.numTel">
+                                </div>
+        
+                               
+                               
+                            </div>
+        
+                           
+        
+                          
+                            <div class="row justify-content-center">
+        
+                                <div class="form-group col-sm-6">
+                                    
+                                    <button type="submit" class="btn-block btn-primary"
+                                    [disabled]="accountType==null">Open Account</button> </div>
+        
+                            </div>
+                      
+              
+            </form>
+        
+            </div>
+        </div>
+
+          
+    </div>
+        </div>
+    </div>
+  </main>
+
+
+  

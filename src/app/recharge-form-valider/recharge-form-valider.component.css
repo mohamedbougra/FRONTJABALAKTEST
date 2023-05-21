@@ -1,0 +1,41 @@
+.col-md-12 {
+  margin-left: 60px;
+}
+body {
+  background-color: rgb(248, 244, 244);
+  height: 100%;
+}
+.sousTitle {
+  color: grey;
+  margin-left: 6px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card {
+  background-color: #fff;
+  border-radius: 23px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem !important;
+}
+.c .nom {
+  margin-left: 120px;
+}
+
+.title {
+  margin-bottom: 20px;
+  border-bottom: 0.8px solid rgb(232, 232, 241);
+}
+.title2 {
+  margin-top: 60px;
+  border-bottom: 0.8px solid rgb(232, 232, 241);
+}
+
+.key1 {
+  margin-top: 20px;
+}
+.key2 {
+  margin-top: 20px;
+}
+.value {
+  color: blue;
+}

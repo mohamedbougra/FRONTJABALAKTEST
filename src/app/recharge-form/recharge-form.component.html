@@ -1,0 +1,77 @@
+<div class="content row">
+  <div class="col-md-12">
+    <h3>{{ title }}</h3>
+    <div class="content2">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex">
+            <div class="left">
+              <img
+                class="card-img img-fluid"
+                [src]="img"
+                alt="Image"
+                style="max-width: 200px; max-height: 250px"
+              />
+            </div>
+            <div>
+              <h5 class="card-title"></h5>
+              <form class="form">
+                <div class="form-group">
+                  <input
+                    placeholder="N° de Telephone"
+                    type="text"
+                    class="form-control"
+                    id="telephone"
+                    [(ngModel)]="tel"
+                    #Tel="ngModel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Pass</label>
+                  <select
+                    class="form-control"
+                    id="exampleFormControlSelect1"
+                    (change)="onSelectPass($event)"
+                  >
+                    <option value="10">10 DH *2</option>
+                    <option value="10">10 DH *3</option>
+                    <option value="10">10 DH *6</option>
+                    <option value="20">20 DH *2</option>
+                    <option value="20">20 DH *3</option>
+                    <option value="20">20 DH *6</option>
+                    <option value="25">25 DH *2</option>
+                    <option value="25">25 DH *3</option>
+                    <option value="25">25 DH *6</option>
+                    <option value="30">30 DH *2</option>
+                    <option value="30">30 DH *3</option>
+                    <option value="30">30 DH *6</option>
+                  </select>
+                </div>
+                <div class="halima">
+                  <div class="d-flex justify-content-end">
+                    <button
+                      class="client-button btn"
+                      type="button"
+                      routerLink="clientHome/recharge/form/valider"
+                      routerLinkActive="active"
+                      (click)="formValider()"
+                    >
+                      <i class="fa-solid fa-check"></i> Valider
+                    </button>
+                    <button
+                      class="cancel-client-button btn"
+                      type="button"
+                      (click)="goToRecharge()"
+                    >
+                      <i class="fa-solid fa-xmark"></i> Annuler
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

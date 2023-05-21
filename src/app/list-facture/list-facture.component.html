@@ -1,0 +1,40 @@
+<div class="main">
+    <div class="headingContainer">
+           
+        <h1 class="heading">
+            Liste de facture Disponible 
+        </h1>
+        <button class="btn btn-secondary mt-1 button" (click)="goBack()">Go Back</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date-Emission</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Creancier</th>
+
+                <th>Montant</th>
+                <th>Statut</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let facture of listFacture ; let i = index"  >
+                <td>{{i+1}}</td>
+                <td>{{facture.date_emission}}</td>
+                <td>{{facture.ref}}</td>
+                <td>{{facture.description}}</td>
+                <td>{{facture.creancier}}</td>
+                <td>{{facture.montant_fac}} DH</td>
+                <td class="text-danger" style="font-weight: bold;">{{facture.status}}</td>
+                <td><button class="btn btn-primary actionButton">Pay</button></td>
+                
+
+            </tr>
+           
+        </tbody>
+    </table>
+</div>

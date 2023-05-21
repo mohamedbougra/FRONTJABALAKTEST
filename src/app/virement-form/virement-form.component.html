@@ -1,0 +1,261 @@
+<div class="content">
+  <h2>Service de Livraison</h2>
+  <div>
+    <div class="content2">
+      <div
+        class="card mx-4 mx-md-5 shadow-5-strong"
+        style="background: hsla(0, 0%, 100%, 0.8)"
+      >
+        <div class="card-body py-5 px-md-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <div class="col-lg-8">
+                <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="showNotEnoughCredit"
+                >
+                  You do not have enough Credit !
+                </div>
+              </div>
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1">Nom</label>
+
+                      <input
+                        type="text"
+                        id="form3Example1"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example2"
+                        >Prénom</label
+                      >
+                      <input
+                        type="text"
+                        id="form3Example2"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- tel et email -->
+                <div class="row">
+                  <div class="col-md-6 mb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1"
+                        >Telephone</label
+                      >
+
+                      <input
+                        type="tel"
+                        id="form3Example1"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example2"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="form3Example2"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--N° de compte-->
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form3Example3"
+                    >N° de compte</label
+                  >
+                  <input
+                    type="text"
+                    id="form3Example3"
+                    class="form-control"
+                    [(ngModel)]="virementRequest.ribDest"
+                    #RibDest="ngModel"
+                    name="RibDest"
+                    required
+                  />
+                  <div
+                    class="col-lg-8"
+                    *ngIf="RibDest.touched && !RibDest.valid"
+                  >
+                    <div
+                      class="alert alert-danger"
+                      *ngIf="RibDest.errors && RibDest.errors.required"
+                    >
+                      Account Number Field is required
+                    </div>
+                    <div
+                      class="alert alert-danger"
+                      *ngIf="RibDest.errors && RibDest.errors.pattern"
+                    >
+                      Invalid Format for Account Number: Must only contain
+                      numbers
+                    </div>
+                    <div
+                      class="alert alert-danger"
+                      *ngIf="RibDest.errors && RibDest.errors.maxlength"
+                    >
+                      Account Number Field can only contain 24 numbers
+                    </div>
+                    <div
+                      class="alert alert-danger"
+                      *ngIf="RibDest.errors && RibDest.errors.minlength"
+                    >
+                      Account Number Field must contain 24 numbers
+                    </div>
+                  </div>
+                </div>
+                <div class="form-outline mb-2">
+                  <label for="exampleFormControlSelect1"
+                    >Adresse de livraison</label
+                  >
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option value="Agadir">Agadir</option>
+                    <option value="Al Hoceima">Al Hoceima</option>
+                    <option value="Azilal">Azilal</option>
+                    <option value="Beni Mellal">Beni Mellal</option>
+                    <option value="Ben Slimane">Ben Slimane</option>
+                    <option value="Boulemane">Boulemane</option>
+                    <option value="Casablanca">Casablanca</option>
+                    <option value="Chaouen">Chaouen</option>
+                    <option value="El Jadida">El Jadida</option>
+                    <option value="El Kelaa des Sraghna">
+                      El Kelaa des Sraghna
+                    </option>
+                    <option value="Er Rachidia">Er Rachidia</option>
+                    <option value="Essaouira">Essaouira</option>
+                    <option value="Fes">Fes</option>
+                    <option value="Figuig">Figuig</option>
+                    <option value="Guelmim">Guelmim</option>
+                    <option value="Ifrane">Ifrane</option>
+                    <option value="Kenitra">Kenitra</option>
+                    <option value="Khemisset">Khemisset</option>
+                    <option value="Khenifra">Khenifra</option>
+                    <option value="Khouribga">Khouribga</option>
+                    <option value="Laayoune">Laayoune</option>
+                    <option value="Larache">Larache</option>
+                    <option value="Marrakech">Marrakech</option>
+                    <option value="Meknes">Meknes</option>
+                    <option value="Nador">Nador</option>
+                    <option value="Ouarzazate">Ouarzazate</option>
+                    <option value="Oujda">Oujda</option>
+                    <option value="Rabat-Sale">Rabat-Sale</option>
+                    <option value="Safi">Safi</option>
+                    <option value="Settat">Settat</option>
+                    <option value="Sidi Kacem">Sidi Kacem</option>
+                    <option value="Sidi Kacem">Sidi Ifni</option>
+                    <option value="Tangier">Tangier</option>
+                    <option value="Tan-Tan">Tan-Tan</option>
+                    <option value="Taounate">Taounate</option>
+                    <option value="Taroudannt">Taroudannt</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Taza">Taza</option>
+                    <option value="Tetouan">Tetouan</option>
+                    <option value="Tiznit">Tiznit</option>
+                  </select>
+                </div>
+                <div class="form-outline mb-2">
+                  <label for="produit">Choiser des Produits:</label>
+
+                  <select
+                    name="produit"
+                    class="form-control"
+                    id="produit"
+                    multiple
+                  >
+                    <option value="laptop">Laptop</option>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="headphones">Headphones</option>
+                    <option value="camera">Camera</option>
+                    <option value="printer">Printer</option>
+                    <option value="external-hard-drive">
+                      External Hard Drive
+                    </option>
+                    <option value="monitor">Monitor</option>
+                    <option value="keyboard">Keyboard</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="speakers">Speakers</option>
+                    <option value="microphone">Microphone</option>
+                    <option value="graphics-card">Graphics Card</option>
+                    <option value="ram">RAM</option>
+                    <option value="ssd">SSD</option>
+                    <option value="hdd">HDD</option>
+                    <option value="usb-flash-drive">USB Flash Drive</option>
+                    <option value="network-router">Network Router</option>
+                    <option value="ethernet-cable">Ethernet Cable</option>
+                    <option value="webcam">Webcam</option>
+                    <option value="software">Software</option>
+                    <option value="programming-books">Programming Books</option>
+                    <option value="course-materials">Course Materials</option>
+                    <option value="batteries">Batteries</option>
+                    <option value="chargers">Chargers</option>
+                  </select>
+                  <p>Ctrl+select : pour une multeSelect</p>
+                </div>
+                <!-- Montant -->
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form3Example3">Montant</label>
+
+                  <input
+                    type="email"
+                    id="form3Example3"
+                    class="form-control"
+                    [(ngModel)]="virementRequest.montant"
+                    #Montant="ngModel"
+                    name="Montant"
+                    required
+                    pattern="[0-9,]+"
+                  />
+                  <div
+                    class="col-lg-8"
+                    *ngIf="Montant.touched && !Montant.valid"
+                  >
+                    <div
+                      class="alert alert-danger"
+                      *ngIf="Montant.errors && Montant.errors.required"
+                    >
+                      Amount Field is required
+                    </div>
+                    <div
+                      class="alert alert-danger"
+                      *ngIf="Montant.errors && Montant.errors.pattern"
+                    >
+                      Invalid Format for Amount: Must only contain numbers
+                    </div>
+                  </div>
+                </div>
+                <!-- Submit button -->
+                <input
+                  type="submit"
+                  class="btn client-button btn-block mb-2"
+                  (click)="effectuerVirementClicked()"
+                  [disabled]="!(Montant.valid && RibDest.valid)"
+                />
+                <button
+                  class="btn cancel-client-button btn-block mb-2"
+                  type="button"
+                >
+                  <i class="fa-solid fa-arrow-left fa-fw mr-3"></i>Back
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
